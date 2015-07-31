@@ -1,7 +1,6 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-  // GET and POST requests for links
   var getLinks = function() {
     return $http({
       method: 'GET',
