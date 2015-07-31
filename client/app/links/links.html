@@ -1,3 +1,8 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller='LinksController'>
+  <img src='../../assets/redirect_icon.png'/>
+  <div class='info'></div>
+  <div class='visits'><span class='count'>{{ visits }}</span>Visits</div>
+  <div class='title'> {{ title }}</div>
+  <div class='original'>{{ url }}</div>
+  <a href=' {{ base_url }}/{{ code }}'>{{ base_url }}/{{ code }}</a>
 </div>
