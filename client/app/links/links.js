@@ -6,10 +6,12 @@ angular.module('shortly.links', [])
   $scope.getLinks = function () {
     Links.getLinks()
       .then(function(links) {
-        $scope.data = links;
+        $scope.data.links = links;
       })
       .catch(function (error) {
         console.log(error);
       });
   };
+
+  $scope.getLinks();
 });
