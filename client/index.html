@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   </head>
   <body>
     <h1>Shortly</h1>
@@ -12,15 +13,22 @@
       <ul>
         <li><a href='#links' class='index'>All Links</a></li>
         <li><a href='#shorten' class='create'>Shorten</a></li>
-        <li ng-Controller='AuthController'><a href='' class='logout' ng-click='signout()'>Signout</a></li>
+        <li ng-Controller='AuthController'><a href='#/signout' class='logout' ng-click='signout()'>Signout</a></li>
       </ul>
     </div>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+    <!-- <div ng-view></div> -->
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+    <!-- the ui-view directive is for angular-ui-router to load a view (or nested views) -->
+    <!-- can have multiple ui-views! -->
+    <div ui-view></div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-ui-route/release/angular-ui-router.min.js"></script>
+    <script src="lib/ngFx.min.js"></script>
 
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>
